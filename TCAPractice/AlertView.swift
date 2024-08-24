@@ -19,10 +19,6 @@ struct AlertView: View {
                 Text("Button")
             })
         }
-        .alert(store: $store.scope(state: \.alert, action: \.alert))
+        .alert($store.scope(state: \.alert, action: \.alert))
     }
 }
-
-//#Preview {
-//    AlertView()
-//}

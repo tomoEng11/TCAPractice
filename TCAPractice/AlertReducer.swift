@@ -34,14 +34,12 @@ struct AlertReducer {
                     ButtonState(role: .cancel) {
                         TextState("キャンセル")
                     }
-
                     ButtonState(role: .destructive, action: .confirmButtonTapped) {
-                        TextState("Delete")
+                        TextState("Dismiss")
                     }
                 } message: {
                     TextState("どうする？")
                 }
-
                 return .none
 
             case .alert(.presented(.confirmButtonTapped)):
